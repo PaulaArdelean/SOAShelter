@@ -18,6 +18,17 @@ import { rabbitmqHost } from './config';
           },
         },
       },
+      {
+        name: 'ANIMALS_SERVICE',
+        transport: Transport.RMQ,
+        options: {
+          urls: [`amqp://guest:guest@${rabbitmqHost}:5672`],
+          queue: 'animals-messages',
+          queueOptions: {
+            durable: false,
+          },
+        },
+      },
     ]),
   ],
   controllers: [AppController],
