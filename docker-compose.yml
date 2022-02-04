@@ -1,13 +1,13 @@
 version: "3.2"
 services:
-  client:
-    build: ./microservice-client
+  animal-shelter-client:
+    build: ./backend/animal-shelter-client
     ports:
       - 3000:3000
     environment:
       RABBITMQ_HOST: rabbitmq
-  microservices:
-    build: ./microservices-app
+  animal-shelter-authentication:
+    build: ./backend/animal-shelter-authentication
     environment:
       RABBITMQ_HOST: rabbitmq
   rabbitmq:
