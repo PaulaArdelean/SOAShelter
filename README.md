@@ -49,7 +49,7 @@ Because Github does not render mermaid diagrams, I have added images for easier 
     User([User])-.-uses-.->SOAShelter(SOAShelter)
 
 ```
-![SystemContextDiagramImage](readmeimages/SystemContextDiagram.JPG)
+![SystemContextDiagramImage](/readmeimages/SystemContextDiagram.JPG)
 
 ### Container Diagram
 
@@ -65,7 +65,7 @@ Because Github does not render mermaid diagrams, I have added images for easier 
   SOAShelter-BackendClient(REST Service) -.-response-.->SOAShelter(Web application)
 ```
 
-![ContainerDiagramImage](readmeimages/ContainerDiagram.JPG)
+![ContainerDiagramImage](/readmeimages/ContainerDiagram.JPG)
 
 ### Component Diagram Front-end
 ```mermaid
@@ -94,7 +94,7 @@ graph TD
     end
 ```
 
-![FrontEndComponentDiagramImage](readmeimages/ComponentDiagramFE.JPG)
+![FrontEndComponentDiagramImage](/readmeimages/ComponentDiagramFE.JPG)
 
 ### Component Diagram Back-end
 ```mermaid
@@ -130,7 +130,7 @@ graph TD
 
 ```
 
-![BackEndComponentDiagramImage](readmeimages/ComponentDiagramBE.JPG)
+![BackEndComponentDiagramImage](/readmeimages/ComponentDiagramBE.JPG)
 
 ### Code AuthenticationMicroservice
 ```mermaid
@@ -143,7 +143,7 @@ classDiagram
     AppService : loginUser()
 ```
 
-![CodeAuthMSImage](readmeimages/CodeDiagramAuthMS.JPG)
+![CodeAuthMSImage](/readmeimages/CodeDiagramAuthMS.JPG)
 
 ### Code DataWriteMicroservice
 ```mermaid
@@ -158,4 +158,4 @@ classDiagram
     AppService : deleteAnimal()
 ```
 
-![CodeDataWriteMSImage](readmeimages/CodediagramDataWriteMS.JPG)
+![CodeDataWriteMSImage](/readmeimages/CodediagramDataWriteMS.JPG)
