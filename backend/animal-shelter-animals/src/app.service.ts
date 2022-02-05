@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { initializeApp } from 'firebase/app';
-import { getDatabase, push, ref, set, remove } from 'firebase/database';
+import { getDatabase, push, ref, set, remove, update } from 'firebase/database';
 import { AnimalDto } from './_models/animal.dto';
 
 const firebaseConfig = {
@@ -40,6 +40,13 @@ export class AppService {
     const animalRef = ref(this.database, `animals/${animalId}`);
     remove(animalRef).then(() => {
       console.log(`Deleted entry with id: ${animalId}`);
+    });
+  }
+
+  addImage(animalId: string, imageUrl: string) {
+    const animalRef = ref(this.database, `animals/${animalId}/imageUrl`);
+    update(animalRef, { imageUrl }).then(() => {
+      console.log(`Uploaded image for entry with id: ${animalId}`);
     });
   }
 }

@@ -27,11 +27,13 @@ export class AppController {
   registerUser(
     @Body() registerDto: RegisterUserDto,
   ): Observable<RegisterUserDto> {
+    console.log('sending data to auth client for register', registerDto);
     return this.authClient.send<RegisterUserDto>('register-user', registerDto);
   }
 
   @Post('auth/login')
   loginUser(@Body() loginDto: LoginDto): Observable<LoginDto> {
+    console.log('sending data to auth client for login', loginDto);
     return this.authClient.send<LoginDto>('login-user', loginDto);
   }
 

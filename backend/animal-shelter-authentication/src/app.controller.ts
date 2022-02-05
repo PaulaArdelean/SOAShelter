@@ -11,11 +11,13 @@ export class AppController {
 
   @MessagePattern('register-user')
   async handleRegisterMessage(@Payload() data: RegisterDto): Promise<User> {
+    console.log('received data for register', data);
     return (await this.appService.registerUser(data.email, data.password)).user;
   }
 
   @MessagePattern('login-user')
   async handleLoginUser(@Payload() data: LoginDto): Promise<User> {
+    console.log('received data for login', data);
     return (await this.appService.loginUser(data.email, data.password)).user;
   }
 }

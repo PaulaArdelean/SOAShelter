@@ -3,4 +3,5 @@ export class AnimalDto {
   type: string;
   name: string;
   imageUrl: string;
+  description: string;
 }

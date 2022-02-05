@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { User } from 'firebase/auth';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./app-layout.component.css']
 })
 export class AppLayoutComponent implements OnInit {
-  // public currentUser: User | null = null;
+  public currentUser: any;
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    const userstring = localStorage.getItem('loggedUser');
+    if(userstring) 
+      this.currentUser = JSON.parse(userstring);
+  }
 }

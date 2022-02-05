@@ -15,7 +15,7 @@ const routes: Routes = [
     children: [
       {
         path:'',
-        loadChildren: () => import('./modules/authentication/authentication.module').then(a => a.AuthenticationModule)
+        loadChildren: () => import('mfe2/AuthenticationModule').then(a => a.AuthenticationModule)
       }
     ]
   },
@@ -25,7 +25,7 @@ const routes: Routes = [
     children: [
       {
         path:'',
-        loadChildren: () => import('./modules/home/home.module').then(h => h.HomeModule)
+        loadChildren: () => import('mfe1/HomeModule').then(h => h.HomeModule)
       }
     ]
   }
