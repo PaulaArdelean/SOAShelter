@@ -41,7 +41,7 @@ npm start
 
 The frontend applications also contain dockerfile configurations to be ran in a container, but running them on my system was not possible due to the large size of the applications.
 ## Structure
-Because Github does not render mermaid diagrams, I have added images for easier reading without the need to clone.
+Because Github does not render mermaid diagrams, I have added images for easier reading without the need to clone in the readmeimages folder.
 
 ### System Context Diagram
 ```mermaid
@@ -49,8 +49,6 @@ Because Github does not render mermaid diagrams, I have added images for easier 
     User([User])-.-uses-.->SOAShelter(SOAShelter)
 
 ```
-![SystemContextDiagramImage](/readmeimages/SystemContextDiagram.JPG)
-
 ### Container Diagram
 
 ```mermaid
@@ -64,9 +62,6 @@ Because Github does not render mermaid diagrams, I have added images for easier 
   SOAShelter-BackendClient(REST Service) -.-sends-message-.->SOAShelter-AnimalsService(Data Write Microservice)
   SOAShelter-BackendClient(REST Service) -.-response-.->SOAShelter(Web application)
 ```
-
-![ContainerDiagramImage](/readmeimages/ContainerDiagram.JPG)
-
 ### Component Diagram Front-end
 ```mermaid
 graph TD
@@ -93,9 +88,6 @@ graph TD
     BackendApplication
     end
 ```
-
-![FrontEndComponentDiagramImage](/readmeimages/ComponentDiagramFE.JPG)
-
 ### Component Diagram Back-end
 ```mermaid
 graph TD
@@ -129,9 +121,6 @@ graph TD
     end
 
 ```
-
-![BackEndComponentDiagramImage](/readmeimages/ComponentDiagramBE.JPG)
-
 ### Code AuthenticationMicroservice
 ```mermaid
 classDiagram
@@ -142,8 +131,6 @@ classDiagram
     AppService : registerUser()
     AppService : loginUser()
 ```
-
-![CodeAuthMSImage](/readmeimages/CodeDiagramAuthMS.JPG)
 
 ### Code DataWriteMicroservice
 ```mermaid
@@ -157,5 +144,3 @@ classDiagram
     AppService : updateAnimal()
     AppService : deleteAnimal()
 ```
-
-![CodeDataWriteMSImage](/readmeimages/CodediagramDataWriteMS.JPG)
