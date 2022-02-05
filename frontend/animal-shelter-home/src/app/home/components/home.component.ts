@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimalsService } from '../services/blogPosts.service';
+import { AnimalsService } from '../services/animals.service';
 
 @Component({
   selector: 'app-home',

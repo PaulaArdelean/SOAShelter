@@ -16,7 +16,7 @@ export class AppController {
   }
 
   @MessagePattern('login-user')
-  async handleLoginUser(@Payload() data: LoginDto): Promise<User> {
+  async handleLoginUserMessage(@Payload() data: LoginDto): Promise<User> {
     console.log('received data for login', data);
     return (await this.appService.loginUser(data.email, data.password)).user;
   }
